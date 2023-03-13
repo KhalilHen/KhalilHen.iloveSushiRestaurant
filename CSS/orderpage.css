@@ -1,0 +1,35 @@
+body,
+html {
+  background-color: black;
+  height: 100%;
+  margin: 0;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.Logo {
+  height: 100px;
+}
+.headercontainer {
+  display: flex;
+  color: white;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  justify-content: space-between;
+  flex-direction: row;
+  background-image: url("https://ilovesushi.nl/app/themes/lyfter-child/img/empty_banner.png");
+  height: 500px !important;
+}
+
+.size {
+  height: 100px;
+  width: 300px;
+}
+.redheader {
+  color: white;
+}
+p {
+  color: white;
+}

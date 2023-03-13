@@ -1,0 +1,91 @@
+body,
+html {
+  background-color: black;
+  height: 100%;
+  margin: 0;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.Logo {
+  height: 100px;
+}
+/* .test 
+{
+
+  display: flex;
+  flex-direction: row;
+} */
+.headercontainer {
+  display: flex;
+  color: white;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#sushiheadercontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.SushiHeader {
+  height: 50px;
+  width: 300px;
+  background-color: red;
+  justify-items: flex-start;
+  color: white;
+  font-family: "Oswald",sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+  text-align: center;
+}
+
+.sushiheader1 {
+  height: 100px;
+  width: 250px;
+  background-color: red;
+  justify-items: flex-start;
+}
+.SushiContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  color: white;
+  list-style: none;
+}
+
+.SushiBlock {
+  display: block;
+  background-color: black;
+  height: 300px;
+  width: 300px;
+  border: 2px solid #fff;
+}
+
+.SushiBlock2 {
+  display: block;
+  background-color: black;
+  height: 300px;
+  width: 300px;
+  justify-content: space-between;
+  border: 2px solid #fff;
+}
+.SushiFooter {
+  display: flex;
+
+  color: #b81a21;
+  text-align: right;
+}
+img {
+  height: 225px;
+  width: 225px;
+}
