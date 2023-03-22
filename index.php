@@ -22,8 +22,8 @@
 
 
 <span> I Love Sushi Nijmegen - Molenweg 66542 PW Nijmegen</span>
-<a href="createaccount.php">Create</a>
-<a href="login.php">Account</a>
+<a href="createaccount.php">Create account</a>
+<a href="login.php">Login</a>
 
 
 </div>

@@ -27,9 +27,26 @@ html {
   height: 100px;
   width: 300px;
 }
-.redheader {
-  color: white;
-}
 p {
+
+  margin-right:   10px;
+}
+.Redcontainer {
+
+
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  height: 50px;
+  width: 100%;
+  background-color: red;
+}
+.redheader {
+  display: flex;
+  
+   
   color: white;
 }

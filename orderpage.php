@@ -1,3 +1,13 @@
+
+
+<?php
+
+require_once('conn.php');
+$stmt = $conn->prepare("SELECT * FROM users");
+$stmt->execute();
+$products = $stmt->fetchAll();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +22,9 @@
     
 <div class="headercontainer">
 
-<img class="Logo" src="https://ilovesushi.nl/app/themes/lyfter-child/img/base/brand-logo.svg" alt="Logo"/>
 
+<img   class="Logo" src="https://ilovesushi.nl/app/themes/lyfter-child/img/base/brand-logo.svg" alt="Logo"/>
+</a>
 <a href ="tel: 024-2120123"></a>
 
 <a href="contact"></a>
@@ -23,14 +34,18 @@
 
 
 <?php
-$username = $_POST['username'];
-$password = $_POST['password'];
-$email    = $_POST['email'];
-$number = $_POST['number'];
-
-echo $username . ' ' . $password.''.$email.''$number;
 
 
+
+foreach ($products as $row) {
+  
+  echo  '<div class="OrderContainer">';
+  // echo $row['name']."<br />\n";
+ 
+
+
+  echo '</div>';
+}
 
 ?>  
 
@@ -39,11 +54,12 @@ echo $username . ' ' . $password.''.$email.''$number;
 
 
 
-
+<div class="Redcontainer">
 <div class="redheader">
 <p>Informatie</p><span>Bestellen</span>
 </div>
+</div>
 
 
-</body>
+</body> 
 </html>
