@@ -1,3 +1,7 @@
+<?php 
+
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +21,20 @@
 $stmt = $conn->prepare("SELECT * FROM users WHERE username=:username AND password=:password");
 $stmt->execute(['username' => $username, 'password' =>  $password,]); 
 $user = $stmt->fetch(); 
-  header('location: orderpage.php');
 
+
+if($user) {
+  session_start();
+  $_SESSION['user_id'] = $user['username'];
+  $_SESSION['user_password'] = $user['password'];
+  header('Location: dashboard.php');
+  exit;
+}
+  // else {
+  //   header('location: orderpage.php');
+
+
+  // }
   ?>
 
 </body>
