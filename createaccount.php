@@ -4,7 +4,7 @@ session_start();
 
 ?>
 
-th=device-width, initial-scale=1.0">
+
     <title>Create</title>
 </head>
 <body>
