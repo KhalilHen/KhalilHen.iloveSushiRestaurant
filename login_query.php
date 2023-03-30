@@ -1,7 +1,4 @@
-<?php 
 
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,24 +14,36 @@ session_start();
 
   require 'conn.php';
 
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $user = [
+    'username' => $username,
+    'password' => $password,
+  ];
+
+
 
 $stmt = $conn->prepare("SELECT * FROM users WHERE username=:username AND password=:password");
+
 $stmt->execute(['username' => $username, 'password' =>  $password,]); 
+
 $user = $stmt->fetch(); 
 
 
 if($user) {
+
   session_start();
-  $_SESSION['user_id'] = $user['username'];
-  $_SESSION['user_password'] = $user['password'];
+  $_SESSION['user_id'] = $user['id'];
+  $_SESSION['username'] = $user['username']; 
+  
   header('Location: dashboard.php');
   exit;
 }
-  // else {
-  //   header('location: orderpage.php');
+  else {
+    header('location: orderpage.php');
 
 
-  // }
+  }
   ?>
 
 </body>
