@@ -1,5 +1,7 @@
 <?php
 
+
+
 require_once('conn.php');
 $stmt = $conn->prepare("SELECT * FROM users");
 $stmt->execute();

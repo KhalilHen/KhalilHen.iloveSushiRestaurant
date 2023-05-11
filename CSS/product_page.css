@@ -1,0 +1,44 @@
+body,
+html {
+  background-color: black;
+  height: 100%;
+  margin: 0;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.Logo {
+  height: 100px;
+}
+
+.headercontainer {
+  display: flex;
+  color: white;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  flex-direction: row;
+}
+a {
+  margin-left: 30px;
+}
+
+.Container {
+  display: flex;
+  height: 300px;
+
+  justify-content: center;
+  flex-direction: column;
+}
+
+label {
+  color: white;
+}
+.form {
+  height: 200px;
+  width: 350px;
+
+  display: flex;
+  flex-direction: row;
+}

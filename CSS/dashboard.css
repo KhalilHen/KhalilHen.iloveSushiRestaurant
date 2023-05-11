@@ -1,0 +1,102 @@
+body {
+  background-color: black;
+  height: 100%;
+  margin: 0;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.Logo {
+  height: 100px;
+}
+
+.headercontainer {
+  background-color: black;
+  display: flex;
+  color: white;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  background-image: none;
+  flex-direction: row;
+  height: 0px;
+  height: 200px;
+}
+a {
+  margin-left: 30px;
+}
+
+.Container {
+  display: flex;
+  flex-direction: row;
+}
+
+.blok {
+  background-color: #242424;
+  height: 120px;
+  width: 350px;
+  display: flex;
+  /* max-width: 700px; */
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+
+  height: 120px;
+  width: 80px;
+}
+
+.actie {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  font: bold;
+  color: white;
+}
+.beschrijving {
+  display: flex;
+  flex-direction: row;
+}
+.price {
+  width: 60px;
+  display: flex;
+  flex-direction: column-reverse;
+  color: red;
+}
+.delete {
+  display: flexbox;
+  flex-direction: column-reverse;
+}
+.pricerow {
+  display: flex;
+  flex-direction: row;
+}
+.button {
+  display: flex;
+  flex-direction: column;
+  color: red;
+  font: 20px;
+  align-items: flex-end;
+  flex-direction: flex-end;
+  height: 0px;
+}
+button {
+  color: white;
+  /* height: */
+  width: 150px;
+  background-color: red;
+}
+
+.test {
+  color: white;
+} 
+.testkleur {
+  color: white;
+}
+.rowcontainer {
+  display: flex;
+  flex-direction: row;
+  max-width: 700px;
+}

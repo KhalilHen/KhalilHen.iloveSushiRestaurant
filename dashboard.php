@@ -13,8 +13,13 @@ if (!isset($_SESSION['user_id'])) {
 
 
 // require 'index.php';
-
+echo '<div class="tekstkleur">';
 echo 'hi welcome' . ($_SESSION['username']);
+
+$_SESSION["test"] = 'username';
+
+echo '$test';
+echo '</div>';
 ?>
 
 
@@ -25,9 +30,7 @@ echo 'hi welcome' . ($_SESSION['username']);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="CSS/orderpage.css"> -->
     <link rel="stylesheet" href="CSS/dashboard.css">
-
     <title>Dashboard</title>
 </head>
 
@@ -48,8 +51,8 @@ echo 'hi welcome' . ($_SESSION['username']);
 
 
     <?php
-    
-    
+
+
 
     require_once('conn.php');
     $stmt = $conn->prepare("SELECT *  FROM products");
@@ -59,7 +62,10 @@ echo 'hi welcome' . ($_SESSION['username']);
 
 
     require 'conn.php';
+    echo '<div class="rowcontainer">';
     foreach ($products as $row) {
+
+
         echo ' <div class="blok">';
 
         echo ' <div class= "img">';
@@ -68,6 +74,7 @@ echo 'hi welcome' . ($_SESSION['username']);
         echo $row['img'];
         echo ' </div>';
         echo ' <div class="actie">';
+
         // hier moet de product uit database gepakt worden 
         echo '<div class="product">';
         echo $row['product'];
@@ -75,26 +82,31 @@ echo 'hi welcome' . ($_SESSION['username']);
         // hier moet de product info uit database
         echo '<div class="actiedesc">';
         echo $row['product_info'];
-        
+        echo '<div class="delete">';
+
+        echo "<a href ='edit.php?id=" . $row['id'] . "'>Edit</a>";
+        echo "<a href='delete.php?id=" . $row['id'] . "'>Delete </a>";
+
+        echo '</div>';
         echo ' </div>';
         echo '  </div>';
         echo '<div class="price">';
-        
+
         //  hier moet de price gepakt worden uit database
         echo ' <div class="pricerow">';
-        echo '€'.$row['price'];
-        // €
-    
-        //   deze twijfel
-        echo '  <div class="button"></div>';
+        echo '€' . $row['price'];
+
+
+        echo '<div class="button"></div>';
         echo '<button type="button">+</button>';
         echo ' </div>';
-        
-        
-        echo '     </div>';
+
+        echo '</div>';
         echo '</div>';
     }
+
     ?>
+
 
 
 </html>
