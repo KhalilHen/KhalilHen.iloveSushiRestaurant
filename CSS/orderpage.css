@@ -22,31 +22,26 @@ html {
   background-image: url("https://ilovesushi.nl/app/themes/lyfter-child/img/empty_banner.png");
   height: 500px !important;
 }
-  
+
 .size {
   height: 100px;
   width: 300px;
 }
 p {
-
-  margin-right:   10px;
+  margin-right: 10px;
 }
 .Redcontainer {
-
-
-
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
+
   height: 50px;
   width: 100%;
   background-color: red;
 }
 .redheader {
   display: flex;
-  
-   
+
   color: white;
 }
